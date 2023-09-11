@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-image: url('BG_image.jpeg');
+            background-size: 1600px 1600px;
+        }
+
+        img {
+            display: block;
+            margin-left: 600px;
+            margin-top: 50px;
+            height: 330px;
+        }
+
+        .kbcQuestions {
+            display: none;
+            
+        }
+
+        .rashi {
+            text-align: center;
+            color: aliceblue;
+            width: 250px;
+            background-color: rgb(168, 61, 164);
+            padding: 5px;
+            border-radius: 10px;
+            margin-top: 30px;
+            margin-left: 1100px;
+            border: 3px solid gold;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .quiz {
+            text-align: center;
+            color: aliceblue;
+            width: 1300px;
+            background-color: rgb(168, 61, 164);
+            padding: 10px;
+            border-radius: 50px;
+            margin-top: 30px;
+            margin-left: 50px;
+            border: 3px solid gold;
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+
+        .option-btn {
+            font-weight: bold;
+            color: aliceblue;
+            background-color: rgb(168, 61, 164);
+            width: 660px;
+            font-size: 20px;
+            border: 3px solid gold;
+            border-radius: 50px;
+            padding: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            animation-name: animatedbtn;
+            opacity: 0;
+            animation-duration: 2s;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes animatedbtn {
+
+            30% {
+                opacity: 0.1;
+                background-color: rgb(147, 236, 118);
+            }
+
+            60% {
+                opacity: 0.5;
+                background-color: rgb(78, 183, 232);
+            }
+
+            90% {
+                opacity: 0.7;
+                background-color: rgb(236, 150, 194);
+            }
+
+            100% {
+                opacity: 1;
+                background-color: rgb(168, 61, 164);
+            }
+        }
+
+        .firstBtn {
+            margin-left: 50px;
+            animation-delay: 2s;
+        }
+
+        .secondBtn {
+            margin-left: 0px;
+            animation-delay: 4s;
+
+        }
+
+        .thirdBtn {
+            margin-left: 50px;
+            animation-delay: 6s;
+        }
+
+        .fourthBtn {
+            margin-left: 0px;
+            animation-delay: 8s;
+
+        }
+    </style>
+    <title>KBC_Quiz</title>
+</head>
+
+<body>
+    <div>
+        <img src="abhi.jpg" height="300">
+
+    </div>
+    <div class="allQuestions">
+        <div class="que-1 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="5,000">
+            </div>
+            <div>
+                <input class="quiz" id="first-question" type="text"
+                    value="Which of the following is observed as Sports Day every year?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A. 22nd
+                        April</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. 26th
+                        July</button>
+                    <button onclick="changeColor(true)" class="thirdBtn option-btn" value="choiceC">C. 29th
+                        August</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. 2nd
+                        October</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-2 kbcQuestions">
+
+            <div>
+                <input class="rashi" type="text" value="10,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="Which of these products used in Hindu rituals is famous for their fragrance?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A. Akshat</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. Roli</button>
+                    <button onclick="changeColor(false)" class="thirdBtn option-btn" value="choiceC">C. Kumkum</button>
+                    <button onclick="changeColor(true)" class="fourthBtn option-btn" value="choiceD">D. Chandan</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-3 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="15,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="Which of the following gods is also known as ‘Gauri Nandan’?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A. Agni</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. Indra</button>
+                    <button onclick="changeColor(false)" class="thirdBtn option-btn" value="choiceC">C. Hanuman</button>
+                    <button onclick="changeColor(true)" class="fourthBtn option-btn" value="choiceD">D. Ganesha</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-4 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="20,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="Which of these are names of national parks located in Madhya Pradesh?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A. Krishna and
+                        Kanhaiya</button>
+                    <button onclick="changeColor(true)" class="secondBtn option-btn" value="choiceB">B. Kanha and
+                        Madhav</button>
+                    <button onclick="changeColor(false)" class="thirdBtn option-btn" value="choiceC">C. Ghanshyam and
+                        Murari</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. Girdhar and
+                        Gopal</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-5 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="40,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text" value="Where was the BRICS summit held in 2014?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(true)" class="firstBtn option-btn" value="choiceA">A. Brazil</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. India</button>
+                    <button onclick="changeColor(false)" class="thirdBtn option-btn" value="choiceC">C. Russia</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. China</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-6 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="80,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="Who wrote the introduction to the English translation of Rabindranath Tagore’s Gitanjali?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A. P.B.
+                        Shelley</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. Alfred
+                        Tennyson</button>
+                    <button onclick="changeColor(true)" class="thirdBtn option-btn" value="choiceC">C. W.B.
+                        Yeats</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. T.S.
+                        Elliot</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-7 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="1,60,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="The wife of which of these famous sports persons was once captain of Indian volleyball team?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A.
+                        K.D.Jadav</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. Dhyan
+                        Chand</button>
+                    <button onclick="changeColor(false)" class="thirdBtn option-btn" value="choiceC">C. Prakash
+                        Padukone</button>
+                    <button onclick="changeColor(true)" class="fourthBtn option-btn" value="choiceD">D. Milkha
+                        Singh</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-8 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="3,20,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text" value="The abbreviation ‘fob’ stands for">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A. Fellow of
+                        Britain</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. Free of
+                        Bargain</button>
+                    <button onclick="changeColor(true)" class="thirdBtn option-btn" value="choiceC">C. Free on
+                        Board</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. None of
+                        these</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-9 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="6,40,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="Vault, uneven bars, and floor exercise are events in which sport?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A.
+                        Wrestling</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. Synchronized
+                        Swimming</button>
+                    <button onclick="changeColor(false)" class="thirdBtn option-btn" value="choiceC">C. Skating</button>
+                    <button onclick="changeColor(true)" class="fourthBtn option-btn" value="choiceD">D.
+                        Gymnastics</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-10 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="12,50,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="Which of the following is an Island country?">"
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(true)" class="firstBtn option-btn" value="choiceA">A. Maldives</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. Yemen</button>
+                    <button onclick="changeColor(false)" class="thirdBtn option-btn" value="choiceC">C. Peru</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. Oman</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-11 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="25,00,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="Since 2002, what is the currency of Greece?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A. Drachma</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. peso</button>
+                    <button onclick="changeColor(true)" class="thirdBtn option-btn" value="choiceC">C. Euro</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. Lira</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-12 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="50,00,000">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="What is part of a database that holds only one type of information?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A. Report</button>
+                    <button onclick="changeColor(true)" class="secondBtn option-btn" value="choiceB">B. Field</button>
+                    <button onclick="changeColor(false)" class="thirdBtn option-btn" value="choiceC">C. Record</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. File</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-13 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="1 crore">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text" value="
+                '.MOV' extension refers usually to what kind of file?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A. Image
+                        file</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. Audio file
+                    </button>
+                    <button onclick="changeColor(true)" class="thirdBtn option-btn" value="choiceC">C. Animation/movie
+                        file</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. MS Office
+                        document</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-14 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="3 crore">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="The famous Dilwara Temples are situated in?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(false)" class="firstBtn option-btn" value="choiceA">A. Uttar Pradesh
+                    </button>
+                    <button onclick="changeColor(true)" class="secondBtn option-btn" value="choiceB">B.
+                        Rajasthan</button>
+                    <button onclick="changeColor(false)" class="thirdBtn option-btn" value="choiceC">C.
+                        Maharashtra</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. Madhya
+                        Pradesh</button>
+                </div>
+            </div>
+        </div>
+        <div class="que-15 kbcQuestions">
+            <div>
+                <input class="rashi" type="text" value="7 crore">
+
+            </div>
+            <div>
+                <input class="quiz" id="second-question" type="text"
+                    value="which of the following is two zero two four?">
+            </div>
+            <div>
+                <div>
+                    <button onclick="changeColor(true)" class="firstBtn option-btn" value="choiceA">A. 2024</button>
+                    <button onclick="changeColor(false)" class="secondBtn option-btn" value="choiceB">B. 0044</button>
+                    <button onclick="changeColor(false)" class="thirdBtn option-btn" value="choiceC">C. 0024</button>
+                    <button onclick="changeColor(false)" class="fourthBtn option-btn" value="choiceD">D. 0044</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="result.js"> </script>
+</body>
+</html>
